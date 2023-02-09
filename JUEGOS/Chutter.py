@@ -2,6 +2,7 @@
 
 import random
 import sys
+from time import sleep
 import emoji
 import getpass
 
@@ -11,10 +12,12 @@ def juegoCpu():
         print("")
         print('\U0001F6A9'+' Comienza el juego!')
         print("")
-        print('\U0001FAA8'+'  Piedra,')
-        print('\U0001F4C3'+' Papel,')
-        print('\U00002702'+'  Tijera')
-        print('\U000023F1'+'  1,2,3...')
+        armas = "\U0000270A Piedra,\n\U0000270B Papel,\n\U0000270C  Tijera\n\U000023F1  1,2,3...!"
+        for c in armas:
+                print(c, end='')
+                sys.stdout.flush()
+                sleep(0.1)
+        print("")
         print("")
         print('\U0001F4E3'+' ¡Ahora!')
         
@@ -24,7 +27,7 @@ def juegoCpu():
                 cpu = random.choice(['Piedra','Papel','Tijera'])
                 print("")
                 usuario = input("\U0001F466 Tú: ")
-                print(f'\U0001F5A5 CPU: {str(cpu)}')
+                print(f'\U0001F4BB CPU: {str(cpu)}')
 
                 if usuario.lower() == cpu.lower():
                         print("Ambos han lanzado igual. Vuelvan a lanzar!")
@@ -59,12 +62,14 @@ def juego2p():
         print("")
         print('\U0001F6A9'+' Comienza el juego!')
         print("")
-        print('\U0001FAA8'+'  Piedra,')
-        print('\U0001F4C3'+' Papel,')
-        print('\U00002702'+'  Tijera')
-        print('\U000023F1'+'  1,2,3...!')
+        armas = "\U0000270A Piedra,\n\U0000270B Papel,\n\U0000270C  Tijera\n\U000023F1  1,2,3...!"
+        for c in armas:
+                print(c, end='')
+                sys.stdout.flush()
+                sleep(0.1)
         print("")
-        print('\U0001F4E3'+'  ¡Ahora!')
+        print("")
+        print('\U0001F4E3'+' ¡Ahora!')
         
 
         while True:
@@ -103,7 +108,7 @@ def juego():
 
         print("")
         print("")
-        print('\U0001F917'+" Bienvenido a Chutea")
+        print('\U0001F917'+" Bienvenido a Chutter")
         
 
         while True:
@@ -134,9 +139,19 @@ def juego():
                                 print(juego())
                                 break
                         elif salir.lower() == "s":
-                                print("\U0001F44B Cerrando el programa...")
                                 print("")
-                                print("-- De Fabián con \U00002764  para tu")
+                                adios = "\U0001F44B Cerrando el programa..."
+                                for c in adios:
+                                        print(c, end='')
+                                        sys.stdout.flush()
+                                        sleep(0.05)
+                                print("")
+                                print("")
+                                creditos = "-- De Fabián con \U00002764  para tu"
+                                for i in creditos:
+                                        print(i, end='')
+                                        sys.stdout.flush()
+                                        sleep(0.05)
                                 print("")
                                 print("")
                                 sys.exit()
