@@ -101,7 +101,7 @@ def juego2p():
                         return "\U0001F3C6 2P Ha Ganado!"
                 elif (usuario1.lower() != "piedra" or usuario1.lower() != "papel" or usuario1.lower() != "tijera") or (usuario2.lower() != "piedra" or usuario2.lower() != "papel" or usuario2.lower() != "tijera"):
                         print("\U0001F6A8 : Alguno de los jugadores ha escrito erroneamente. Vuelvan a lanzar!")
-                        print("--------------------------")
+                        print("----------------------------------------------------------------------------")
                         continue
 
 def juego():
